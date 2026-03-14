@@ -127,7 +127,7 @@ const testimonials = [
     role: "CTO, TechFlow Inc.",
     avatar: "SC",
     color: "from-violet-500 to-purple-600",
-    text: "NexGen completely transformed our digital infrastructure. Their team delivered a robust cloud solution in record time. Absolutely unmatched expertise.",
+    text: "Sycobytes Technologies completely transformed our digital infrastructure. Their team delivered a robust cloud solution in record time. Absolutely unmatched expertise.",
     rating: 5,
   },
   {
@@ -143,7 +143,7 @@ const testimonials = [
     role: "VP Engineering, DataCorp",
     avatar: "MG",
     color: "from-pink-500 to-rose-600",
-    text: "Professional, innovative, and genuinely reliable. NexGen is our go-to technology partner for every new initiative.",
+    text: "Professional, innovative, and genuinely reliable. Sycobytes Technologies is our go-to partner for every new tech initiative.",
     rating: 5,
   },
 ];
@@ -237,7 +237,7 @@ const Index = () => {
                 size="lg"
                 className="rounded-2xl text-base px-10 h-14 font-semibold border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300"
               >
-                <Link to="/services">Explore Services</Link>
+                <Link to="/projects">Explore Projects</Link>
               </Button>
             </div>
 
@@ -372,7 +372,7 @@ const Index = () => {
             <ScrollReveal>
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-5 badge-gradient">
-                  Why NexGen
+                  Why Sycobytes Technologies
                 </span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                   The Partner You've <span className="text-gradient">Always Needed</span>
@@ -545,7 +545,7 @@ const Index = () => {
                     variant="outline"
                     className="rounded-2xl font-semibold px-10 h-14 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
                   >
-                    <Link to="/services">See Our Work</Link>
+                    <Link to="/projects">See Our Work</Link>
                   </Button>
                 </div>
               </div>

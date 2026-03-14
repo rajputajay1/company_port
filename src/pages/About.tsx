@@ -206,7 +206,7 @@ const About = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-5 text-base">
                   Founded in San Francisco by engineers who believed that great technology shouldn't be
-                  gatekept behind enterprise pricing, NexGen started as a three-person consultancy with
+                  gatekept behind enterprise pricing, Sycobytes Technologies started as a three-person consultancy with
                   a mission to level the playing field.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8 text-base">
@@ -321,7 +321,7 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8 relative">
           <SectionHeading
             badge="Our Team"
-            title="The Minds Behind NexGen"
+            title="The Minds Behind Sycobytes Technologies"
             description="A diverse squad of builders, thinkers, and innovators united by a love for great technology."
           />
 
@@ -414,7 +414,7 @@ const About = () => {
               />
               <div className="relative z-10 text-white">
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/20 mb-6 border border-white/30">
-                  <Users size={12} /> Join 200+ companies that trust NexGen
+                  <Users size={12} /> Join 200+ companies that trust Sycobytes Technologies
                 </span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
                   Ready to Work with

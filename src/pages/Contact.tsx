@@ -18,7 +18,7 @@ const officeLocations = [
     address: "123 Innovation Drive, CA 94107",
     icon: Building,
     phone: "+1 (555) 123-4567",
-    email: "sf@nexgen.com",
+    email: "sf@sycobyte.com",
     timezone: "PST (UTC-8)"
   },
   {
@@ -26,7 +26,7 @@ const officeLocations = [
     address: "45 Tech Square, EC2A 4NE",
     icon: Building2,
     phone: "+44 (20) 7946 0000",
-    email: "uk@nexgen.com",
+    email: "uk@sycobyte.com",
     timezone: "GMT (UTC+0)"
   }
 ];
@@ -93,7 +93,7 @@ const Contact = () => {
                        </div>
                        <div>
                           <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">General Inquiries</div>
-                          <div className="text-lg font-bold">hello@nexgen.com</div>
+                          <div className="text-lg font-bold">info@sycobyte.com</div>
                        </div>
                     </div>
                     
