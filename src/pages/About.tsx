@@ -19,7 +19,7 @@ const team = [
     gradient: "from-violet-500 to-purple-700",
     shadow: "shadow-violet-400/30",
     bio: "15+ years building scalable products at Google & Stripe.",
-    location: "San Francisco, CA",
+    location: "Chandigarh, India",
     skills: ["Strategy", "Vision", "Leadership"],
   },
   {
@@ -28,8 +28,8 @@ const team = [
     initials: "EZ",
     gradient: "from-cyan-400 to-blue-600",
     shadow: "shadow-cyan-400/30",
-    bio: "Former MIT engineer. Shipped 50+ production systems.",
-    location: "New York, NY",
+    bio: "Former lead engineer. Shipped 50+ production systems.",
+    location: "Chandigarh, India",
     skills: ["Architecture", "Cloud", "AI/ML"],
   },
   {
@@ -38,8 +38,8 @@ const team = [
     initials: "MR",
     gradient: "from-pink-500 to-rose-600",
     shadow: "shadow-pink-400/30",
-    bio: "Award-winning designer with a passion for pixel-perfect UX.",
-    location: "Austin, TX",
+    bio: "Creative designer with a passion for pixel-perfect UX.",
+    location: "Chandigarh, India",
     skills: ["UI/UX", "Branding", "Motion"],
   },
   {
@@ -49,7 +49,7 @@ const team = [
     gradient: "from-amber-400 to-orange-500",
     shadow: "shadow-amber-400/30",
     bio: "Full-stack wizard. Open-source contributor with 3k+ GitHub stars.",
-    location: "London, UK",
+    location: "Chandigarh, India",
     skills: ["React", "Node.js", "DevOps"],
   },
   {
@@ -58,8 +58,8 @@ const team = [
     initials: "DK",
     gradient: "from-emerald-400 to-teal-600",
     shadow: "shadow-emerald-400/30",
-    bio: "Certified security expert. Protected $2B+ in transactions.",
-    location: "Seoul, KR",
+    bio: "Veteran security expert. Protected $2B+ in transactions.",
+    location: "Chandigarh, India",
     skills: ["SOC2", "PenTest", "SIEM"],
   },
   {
@@ -69,7 +69,7 @@ const team = [
     gradient: "from-indigo-400 to-violet-600",
     shadow: "shadow-indigo-400/30",
     bio: "Product strategist who has launched 20+ B2B SaaS products.",
-    location: "Paris, FR",
+    location: "Chandigarh, India",
     skills: ["Roadmap", "Growth", "Analytics"],
   },
 ];
@@ -104,18 +104,18 @@ const values = [
 
 /* ── Timeline ─────────────────────────────────────── */
 const milestones = [
-  { year: "2015", title: "Founded in SF", desc: "Started with 3 engineers and a bold vision." },
-  { year: "2017", title: "First 50 Clients", desc: "Reached our first major growth milestone." },
-  { year: "2019", title: "Global Expansion", desc: "Opened offices in London, Seoul & Sydney." },
-  { year: "2021", title: "ISO 27001 Certified", desc: "Achieved enterprise-grade security certification." },
-  { year: "2023", title: "AI Division Launch", desc: "Launched dedicated AI & ML practice area." },
-  { year: "2025", title: "200+ Clients", desc: "Serving clients across 30+ countries worldwide." },
+  { year: "2021", title: "Company Founded", desc: "Started as a small creative team with a big vision." },
+  { year: "2022", title: "First 20 Clients", desc: "Successfully delivered our first major digital projects." },
+  { year: "2023", title: "Team Expansion", desc: "Grew our core engineering and design departments." },
+  { year: "2024", title: "Security First", desc: "Implementing advanced security protocols for all clients." },
+  { year: "2025", title: "AI Division Launch", desc: "Launched dedicated AI & ML practice area." },
+  { year: "2026", title: "100+ Happy Clients", desc: "Grown to serve diverse businesses across the country." },
 ];
 
 /* ── Stats ─────────────────────────────────────────── */
 const stats = [
-  { icon: Globe, value: "30+", label: "Countries Served" },
-  { icon: Users, value: "200+", label: "Happy Clients" },
+  // { icon: Globe, value: "30+", label: "Countries Served" },
+  { icon: Users, value: "100+", label: "Happy Clients" },
   { icon: Rocket, value: "500+", label: "Projects Shipped" },
   { icon: Star, value: "4.9/5", label: "Average Rating" },
 ];
@@ -155,20 +155,20 @@ const About = () => {
             >
               Driving Innovation
               <br />
-              Since <span className="text-gradient">2015</span>
+              Since <span className="text-gradient">2021</span>
             </h1>
             <p
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              We started with a simple but powerful mission — make enterprise-grade
-              technology accessible to every business. Today, 50+ passionate technologists
-              serve clients in 30+ countries.
+              We believe that great technology should be within reach for every business. 
+              Our dedicated team specializes in crafting tailored digital experiences that 
+              solve real-world problems and help our partners grow in a digital-first world.
             </p>
 
             {/* Quick stats */}
             <div
-              className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up"
+              className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
               {stats.map((s) => (
@@ -205,13 +205,13 @@ const About = () => {
                   From a Small Team to a <span className="text-gradient">Global Force</span>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-5 text-base">
-                  Founded in San Francisco by engineers who believed that great technology shouldn't be
-                  gatekept behind enterprise pricing, Sycobytes Technologies started as a three-person consultancy with
+                  Founded in Chandigarh by engineers who believed that great technology shouldn't be
+                  gatekept behind enterprise pricing, Sycobytes Technologies started as a small team with
                   a mission to level the playing field.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8 text-base">
-                  Over 10 years, we've scaled to a global team of 50+ specialists, shipped 500+ products,
-                  and established ourselves as the partner of choice for ambitious companies across every industry.
+                  Over 5 years, we've scaled to a dedicated team, shipped 500+ products,
+                  and established ourselves as the partner of choice for ambitious companies.
                 </p>
 
                 {/* Story visual card */}
@@ -219,7 +219,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl" />
                   <div className="relative flex items-center gap-5">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-black text-lg shrink-0 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
-                      10+
+                      5+
                     </div>
                     <div>
                       <div className="font-bold text-lg">Years of Excellence</div>
@@ -316,56 +316,7 @@ const About = () => {
       </section>
 
       {/* ── Team ─────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/4 rounded-full blur-3xl pointer-events-none" />
-        <div className="container mx-auto px-4 lg:px-8 relative">
-          <SectionHeading
-            badge="Our Team"
-            title="The Minds Behind Sycobytes Technologies"
-            description="A diverse squad of builders, thinkers, and innovators united by a love for great technology."
-          />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <ScrollReveal key={member.name} delay={i + 1}>
-                <div className="glass neon-border rounded-3xl p-7 hover-lift hover-glow group relative overflow-hidden">
-                  {/* Gradient blob behind avatar */}
-                  <div className={`absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br ${member.gradient} rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
-
-                  {/* Header row */}
-                  <div className="flex items-start gap-4 mb-5">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.gradient} ${member.shadow} shadow-lg flex items-center justify-center text-white text-xl font-bold shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                      {member.initials}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg leading-tight group-hover:text-gradient transition-all duration-300">
-                        {member.name}
-                      </h3>
-                      <p className="text-primary text-xs font-semibold mt-0.5">{member.role}</p>
-                      <div className="flex items-center gap-1 mt-1 text-muted-foreground">
-                        <MapPin size={11} />
-                        <span className="text-xs">{member.location}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bio */}
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">{member.bio}</p>
-
-                  {/* Skill tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {member.skills.map((skill) => (
-                      <span key={skill} className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-primary/8 text-primary border border-primary/15">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* ── Values ───────────────────────────────── */}
       <section className="py-24 bg-muted/20 relative overflow-hidden">
@@ -432,7 +383,7 @@ const About = () => {
                   </Button>
                   <Button
                     asChild size="lg" variant="outline"
-                    className="rounded-2xl font-semibold px-10 h-14 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm"
+                    className="rounded-2xl font-semibold px-10 h-14 border-white/40 text-primary hover:bg-white/10 backdrop-blur-sm"
                   >
                     <Link to="/services">See Our Services</Link>
                   </Button>
@@ -448,3 +399,58 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
+
+
+
+
+// <section className="py-24 relative overflow-hidden">
+//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/4 rounded-full blur-3xl pointer-events-none" />
+//         <div className="container mx-auto px-4 lg:px-8 relative">
+//           <SectionHeading
+//             badge="Our Team"
+//             title="The Minds Behind Sycobytes Technologies"
+//             description="A diverse squad of builders, thinkers, and innovators united by a love for great technology."
+//           />
+
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+//             {team.map((member, i) => (
+//               <ScrollReveal key={member.name} delay={i + 1}>
+//                 <div className="glass neon-border rounded-3xl p-7 hover-lift hover-glow group relative overflow-hidden">
+//                   <div className={`absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br ${member.gradient} rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
+
+//                   <div className="flex items-start gap-4 mb-5">
+//                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.gradient} ${member.shadow} shadow-lg flex items-center justify-center text-white text-xl font-bold shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+//                       {member.initials}
+//                     </div>
+//                     <div>
+//                       <h3 className="font-bold text-lg leading-tight group-hover:text-gradient transition-all duration-300">
+//                         {member.name}
+//                       </h3>
+//                       <p className="text-primary text-xs font-semibold mt-0.5">{member.role}</p>
+//                       <div className="flex items-center gap-1 mt-1 text-muted-foreground">
+//                         <MapPin size={11} />
+//                         <span className="text-xs">{member.location}</span>
+//                       </div>
+//                     </div>
+//                   </div>
+
+               
+//                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">{member.bio}</p>
+
+//                   <div className="flex flex-wrap gap-2">
+//                     {member.skills.map((skill) => (
+//                       <span key={skill} className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-primary/8 text-primary border border-primary/15">
+//                         {skill}
+//                       </span>
+//                     ))}
+//                   </div>
+//                 </div>
+//               </ScrollReveal>
+//             ))}
+//           </div>
+//         </div>
+//       </section>

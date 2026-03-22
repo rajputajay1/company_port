@@ -5,6 +5,8 @@ import {
   ChevronLeft, ChevronRight, Star,
   Code2, Cpu, Cloud, Lock, CheckCircle,
   TrendingUp, Award, Rocket,
+  AppleIcon,
+  Smartphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
@@ -55,7 +57,7 @@ function CounterNumber({ end, label, suffix = "+" }: { end: number; label: strin
 }
 
 /* ─── Typing Effect ─────────────────────────────── */
-const phrases = ["Web Applications", "Cloud Solutions", "Secure Systems", "AI-Powered Tools"];
+const phrases = ["Web Applications", "Cloud Solutions", "Mobile Applications", "AI-Powered Tools"];
 function TypingText() {
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [displayed, setDisplayed] = useState("");
@@ -102,48 +104,49 @@ const services = [
     shadow: "shadow-cyan-400/25",
     title: "Cloud Solutions",
     desc: "Scalable infrastructure on AWS, Azure & GCP — built for reliability and growth.",
-    tags: ["AWS", "Azure", "Kubernetes"],
+    tags: ["Render", "AWS"],
   },
   {
-    icon: Lock,
-    gradient: "from-pink-500 to-rose-600",
-    shadow: "shadow-pink-500/25",
-    title: "Cybersecurity",
-    desc: "Enterprise-grade security audits, penetration testing, and 24/7 threat monitoring.",
-    tags: ["SOC2", "PenTest", "SIEM"],
-  },
+    icon: Smartphone  ,
+    gradient: "from-emerald-400 to-green-600",
+    shadow: "shadow-emerald-400/25",
+    title: "Application Development",
+    desc: "High-performance mobile and cross-platform apps built using modern frameworks.",
+    tags: ["Flutter", "React Native", "Android"],
+  }
+ 
 ];
 
 const features = [
   { icon: Rocket, text: "Rapid delivery in 30-day sprints" },
-  { icon: Award, text: "ISO 27001 certified processes" },
-  { icon: TrendingUp, text: "99.9% uptime SLA guaranteed" },
+  { icon: Shield, text: "Enterprise-grade security" },
+  { icon: TrendingUp, text: "High Availability" },
   { icon: Users, text: "Dedicated support team" },
 ];
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO, TechFlow Inc.",
-    avatar: "SC",
-    color: "from-violet-500 to-purple-600",
-    text: "Sycobytes Technologies completely transformed our digital infrastructure. Their team delivered a robust cloud solution in record time. Absolutely unmatched expertise.",
+    name: "Rajesh Khanna",
+    role: "Proprietor, RK Exports",
+    avatar: "RK",
+    color: "from-blue-500 to-indigo-600",
+    text: "Working with Sycobytes was the best decision for our digital transformation. They delivered a high-quality inventory management system that has significantly streamlined our operations.",
     rating: 5,
   },
   {
-    name: "James Wilson",
-    role: "CEO, StartupHub",
-    avatar: "JW",
-    color: "from-cyan-400 to-blue-500",
-    text: "The team delivered beyond our expectations — on time, on budget, and with beautiful code quality. Best technology partner we've ever had.",
+    name: "Anjali Sharma",
+    role: "Marketing Head, FabStyle",
+    avatar: "AS",
+    color: "from-emerald-400 to-teal-500",
+    text: "The web application developed by the team is sleek, fast, and very user-friendly. Our customer engagement has increased by 40% since the launch. Highly recommended!",
     rating: 5,
   },
   {
-    name: "Maria Garcia",
-    role: "VP Engineering, DataCorp",
-    avatar: "MG",
-    color: "from-pink-500 to-rose-600",
-    text: "Professional, innovative, and genuinely reliable. Sycobytes Technologies is our go-to partner for every new tech initiative.",
+    name: "Vikram Singh",
+    role: "CEO, TechSolutions India",
+    avatar: "VS",
+    color: "from-amber-400 to-orange-600",
+    text: "Professionalism and technical expertise at its best. They understood our requirements perfectly and delivered a robust solution within the promised timeframe.",
     rating: 5,
   },
 ];
@@ -151,7 +154,7 @@ const testimonials = [
 const techStack = [
   { label: "React / Next.js" }, { label: "Node.js" }, { label: "TypeScript" },
   { label: "AWS / GCP" }, { label: "Python / FastAPI" }, { label: "PostgreSQL" },
-  { label: "Docker / K8s" }, { label: "GraphQL" },
+  { label: "Docker / K8s" }, { label: "GraphQL" },{ label: "HTML / CSS" },{ label: "Bootstrap" },{label: "PHP"},{label: "Laravel"},{label: "Wordpress"},{label:"MySQL"},{label:"MongoDB"}
 ];
 
 /* ─── Page ──────────────────────────────────────── */
@@ -198,7 +201,7 @@ const Index = () => {
             <div className="animate-fade-in-up mb-6">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold badge-gradient shimmer">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Next-Generation Technology Solutions
+                Sycobytes Technologies Solutions
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: "0.5s" }} />
               </span>
             </div>
@@ -263,7 +266,7 @@ const Index = () => {
                     <Star key={i} size={14} className="text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-0.5">Trusted by <span className="text-foreground font-semibold">200+ clients</span></p>
+                <p className="text-xs text-muted-foreground mt-0.5">Trusted by <span className="text-foreground font-semibold">100+ clients</span></p>
               </div>
               <div className="hidden sm:block w-px h-8 bg-border" />
               <div className="text-sm text-muted-foreground">
@@ -287,10 +290,10 @@ const Index = () => {
           <div className="glass neon-border rounded-[2.5rem] p-10 md:p-14 relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y-2 md:divide-y-0 md:divide-x divide-border/20 relative z-10">
-              <CounterNumber end={200} label="Happy Clients" />
+              <CounterNumber end={100} label="Happy Clients" />
               <CounterNumber end={500} label="Projects Shipped" />
-              <CounterNumber end={10} label="Years Experience" />
-              <CounterNumber end={50} label="Team Members" />
+              <CounterNumber end={5} label="Years Experience" />
+              <CounterNumber end={10} label="Team Members" />
             </div>
           </div>
         </div>
@@ -543,7 +546,7 @@ const Index = () => {
                     asChild
                     size="lg"
                     variant="outline"
-                    className="rounded-2xl font-semibold px-10 h-14 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+                    className="rounded-2xl font-semibold px-10 h-14 border-white/40 text-primary hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
                   >
                     <Link to="/projects">See Our Work</Link>
                   </Button>

@@ -2,49 +2,42 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ArrowRight, ExternalLink, Code2, Layers, Smartphone, Sparkles, MonitorSmartphone } from "lucide-react";
+import { ArrowRight, ExternalLink, Code2, Sparkles, MonitorSmartphone, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-Commerce Reimagined",
-    category: "Web Development",
-    desc: "A fully custom, high-conversion e-commerce platform built for a premium fashion brand. Features 3D product rendering, instant checkout, and AI-powered recommendations.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
-    tags: ["Next.js", "Stripe", "TailwindCSS"],
-    icon: MonitorSmartphone,
+    title: "StaySmart - PG Management",
+    category: "SaaS / Management",
+    desc: "A SaaS-based PG Management System with Super Admin and Owner dashboards for student, staff, and rent management. Integrated subscription plans, secure authentication, and automated email notifications for seamless operations.",
+    image: "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&q=80&w=1200",
+    tags: ["MERN Stack", "Razorpay", "Node.js", "Express", "MongoDB"],
+    link: "https://mansion-muse-hub.vercel.app/",
+    icon: Building2,
     gradient: "from-blue-500 to-indigo-600",
     shadow: "shadow-blue-500/20"
   },
   {
-    title: "FinTech Mobile Wallet",
-    category: "Mobile App",
-    desc: "A secure, cross-platform mobile banking app serving 50,000+ daily active users. Includes real-time transactions, biometric auth, and seamless bank integrations.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
-    tags: ["React Native", "Node.js", "PostgreSQL"],
-    icon: Smartphone,
+    title: "ReelRoster - Movie Hub",
+    category: "Web Application",
+    desc: "Enhanced the Movies web app by adding advanced search, dynamic pagination, and real-time API integration, along with skeleton loading states for smooth data transitions, resulting in a faster, more responsive, and user-friendly experience.",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=1200",
+    tags: ["React.js", "TMDB API", "Dynamic Pagination", "Skeleton Loading"],
+    link: "https://boisterous-sunshine-25c834.netlify.app/",
+    icon: MonitorSmartphone,
     gradient: "from-purple-500 to-pink-600",
     shadow: "shadow-purple-500/20"
   },
   {
-    title: "HealthCare Dashboard",
-    category: "SaaS/Dashboard",
-    desc: "An enterprise-grade patient management system for private clinics. Features HIPAA-compliant data storage, telemedicine video calls, and analytics.",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4bffa41?auto=format&fit=crop&q=80&w=1200",
-    tags: ["React", "Firebase", "WebRTC"],
-    icon: Layers,
+    title: "iwood - Influencer Platform",
+    category: "Event-driven Platform",
+    desc: "Designed an interactive event-driven platform where influencers showcase products through live sessions and events, implemented skeleton loaders to improve experience during API latency, and integrated REST APIs for dynamic product data.",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
+    tags: ["React", "Influencer Marketing", "REST API", "Skeleton Loading"],
+    link: "https://iwood.in/",
+    icon: Sparkles,
     gradient: "from-cyan-400 to-teal-500",
     shadow: "shadow-cyan-400/20"
-  },
-  {
-    title: "AI Writing Assistant",
-    category: "AI Integration",
-    desc: "A SaaS tool that uses fine-tuned LLMs to help marketers write SEO-optimized content 10x faster. Built with real-time collaborative editing.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-    tags: ["OpenAI API", "Vue 3", "Python"],
-    icon: Sparkles,
-    gradient: "from-amber-400 to-orange-500",
-    shadow: "shadow-amber-400/20"
   }
 ];
 
@@ -98,9 +91,9 @@ const Projects = () => {
                   {/* Content Container */}
                   <div className="p-8 relative">
                     <div className="absolute right-8 top-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg text-white">
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg text-white hover:scale-110 transition-transform">
                         <ExternalLink size={20} />
-                      </div>
+                      </a>
                     </div>
 
                     <h3 className="text-3xl font-bold mb-4 pr-12 group-hover:text-primary transition-colors">

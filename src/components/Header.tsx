@@ -15,10 +15,12 @@ const navLinks = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
+    setMounted(true);
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -37,15 +39,14 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-18 lg:h-22">
 
-          {/* Logo */}
           <Link to="/" className="group flex items-center">
-            <div className="relative h-12 lg:h-14 transition-all duration-300 group-hover:scale-105 shrink-0 flex items-center justify-center dark:bg-white dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-sm overflow-hidden border border-transparent dark:border-white/10">
+            <div className="relative h-12 md:h-14 lg:h-16 transition-all duration-500 group-hover:scale-110 shrink-0 flex items-center">
               <img
-                src="/logo.png"
+                src={mounted && resolvedTheme === "dark" ? "/darkLogo.png" : "/logo.png"}
                 alt="Sycobytes Technologies"
-                className="h-full w-auto object-contain select-none mix-blend-multiply dark:mix-blend-normal"
+                className="h-full w-auto object-contain select-none shadow-glow-sm"
               />
             </div>
           </Link>

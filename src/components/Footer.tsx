@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const quickLinks = [
   { label: "Home", path: "/" },
@@ -17,18 +19,24 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <footer className="bg-secondary border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="group flex items-center mb-4">
-              <div className="relative h-12 lg:h-14 transition-all duration-300 group-hover:scale-105 shrink-0 flex items-center justify-center">
+            <Link to="/" className="group flex items-center mb-6">
+              <div className="relative h-16 md:h-20 lg:h-25 transition-all duration-500 group-hover:scale-110 shrink-0 flex items-center">
                 <img
-                  src="/logo.png"
+                  src={mounted && resolvedTheme === "dark" ? "/darkLogo.png" : "/logo.png"}
                   alt="Sycobytes Technologies"
-                  className="h-full w-auto object-contain select-none mix-blend-multiply dark:mix-blend-normal"
+                  className="h-full w-auto object-contain select-none shadow-glow-md"
                 />
               </div>
             </Link>
@@ -70,10 +78,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>123 Innovation Drive</li>
-              <li>San Francisco, CA 94107</li>
-              <li>info@sycobyte.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Chandigarh, India</li>
+              <li>sycobytestechnology@gmail.com</li>
+              <li>+91 7837243545</li>
             </ul>
           </div>
         </div>

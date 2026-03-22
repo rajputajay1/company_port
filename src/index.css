@@ -183,6 +183,14 @@
     border: 1px solid hsl(var(--primary) / 0.25);
     color: hsl(var(--primary));
   }
+
+  /* Glow Effects for Logos/Icons */
+  .shadow-glow-sm {
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.3));
+  }
+  .shadow-glow-md {
+    filter: drop-shadow(0 0 15px hsl(var(--primary) / 0.4));
+  }
 }
 
 /* ── Keyframes ─────────────────────────────────── */

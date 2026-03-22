@@ -5,9 +5,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { 
   Globe, Smartphone, Cloud, Brain, Shield, BarChart3, 
   ArrowRight, CheckCircle, Zap, ShieldCheck, Cpu, 
-  Layers, Rocket, MessageSquare, Code2
+  Layers, Rocket, MessageSquare, Code2,Palette, 
+  Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 
 const services = [
   {
@@ -43,21 +45,45 @@ const services = [
     features: ["GPT Integration", "Data Analysis", "Process Automation"]
   },
   {
-    icon: Shield,
-    title: "Cyber Security",
-    desc: "Protect your business with our comprehensive security audits, penetration testing, and 24/7 monitoring.",
-    gradient: "from-rose-500 to-red-600",
-    shadow: "shadow-rose-500/20",
-    features: ["Threat Detection", "Zero Trust", "Incident Response"]
+    icon: Palette,
+    title: "Web Design",
+    desc: "Modern and user-focused UI/UX design that improves engagement and conversions across all devices.",
+    gradient: "from-pink-500 to-rose-500",
+    shadow: "shadow-pink-500/20",
+    features: ["UI/UX Design", "Responsive Layout", "Design Systems"]
+  },
+  {
+    icon: Globe ,
+    title: "WordPress Development",
+    desc: "Custom WordPress websites, themes, and plugins optimized for speed, SEO, and easy content management.",
+    gradient: "from-indigo-500 to-blue-600",
+    shadow: "shadow-indigo-500/20",
+    features: ["Custom Themes", "WooCommerce", "SEO Optimization"]
+  },
+  {
+    icon: Settings,
+    title: "SaaS Development",
+    desc: "Build scalable SaaS platforms with modern technologies like Next.js, Node.js, and cloud-native infrastructure.",
+    gradient: "from-green-400 to-emerald-600",
+    shadow: "shadow-green-400/20",
+    features: ["Multi-Tenant Apps", "Subscription Systems", "API Platforms"]
   },
   {
     icon: BarChart3,
     title: "Digital Strategy",
-    desc: "Strategic consulting to align your technology with business goals. We help you stay ahead of the competition.",
+    desc: "Strategic consulting to align your technology with business goals and help you stay ahead of the competition.",
     gradient: "from-teal-400 to-emerald-600",
     shadow: "shadow-teal-400/20",
     features: ["ROI Focused", "Market Analysis", "Tech Roadmap"]
   },
+  {
+  icon: Palette,
+  title: "UI & UX Design",
+  desc: "Beautiful, user-centered interfaces designed to deliver seamless and engaging digital experiences across all devices.",
+  gradient: "from-pink-500 to-rose-500",
+  shadow: "shadow-pink-500/20",
+  features: ["User Research", "Wireframing", "Interactive Prototypes"]
+}
 ];
 
 const processSteps = [
@@ -187,7 +213,7 @@ const Services = () => {
                   <Button asChild size="lg" className="rounded-2xl font-bold px-12 h-16 bg-white text-primary hover:bg-white/90 shadow-2xl transition-all duration-300 hover:scale-105">
                     <Link to="/contact">Discuss Your Project</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="rounded-2xl font-semibold px-12 h-16 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm">
+                  <Button asChild variant="outline" size="lg" className="rounded-2xl font-semibold px-12 h-16 border-white/40 text-primary hover:bg-white/10 backdrop-blur-sm">
                     <Link to="/about">About Our Experts</Link>
                   </Button>
                 </div>

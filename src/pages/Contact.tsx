@@ -14,20 +14,12 @@ import { toast } from "sonner";
 
 const officeLocations = [
   {
-    city: "San Francisco",
-    address: "123 Innovation Drive, CA 94107",
+    city: "Chandigarh",
+    address: "SCO 123, Sector 17, Chandigarh, India",
     icon: Building,
-    phone: "+1 (555) 123-4567",
-    email: "sf@sycobyte.com",
-    timezone: "PST (UTC-8)"
-  },
-  {
-    city: "London",
-    address: "45 Tech Square, EC2A 4NE",
-    icon: Building2,
-    phone: "+44 (20) 7946 0000",
-    email: "uk@sycobyte.com",
-    timezone: "GMT (UTC+0)"
+    phone: "+91 7837243545",
+    email: "sycobytestechnology@gmail.com",
+    timezone: "IST (UTC+5:30)"
   }
 ];
 
@@ -35,15 +27,33 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      toast.success("Message received! Expect a reply within 4 hours.");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    
+    try {
+      const response = await fetch("http://localhost:5000/api/contact/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(data.message || "Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Failed to connect to the server. Please check your connection.");
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -53,17 +63,17 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 hero-mesh pointer-events-none" />
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold badge-gradient shimmer mb-6">
                 <MessageCircle size={14} className="text-primary" />
                 Available 24/7 for you
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-                Let's Start a <br />
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-[1.1]">
+                Let's Start a <br className="hidden sm:block" />
                 <span className="text-gradient">Conversation</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -76,9 +86,9 @@ const Contact = () => {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-24 relative z-10">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-16 max-w-6xl mx-auto">
+      <section className="py-12 md:py-24 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 max-w-6xl mx-auto">
             
             {/* Contact Details (Left) */}
             <div className="lg:col-span-5 space-y-12">
@@ -87,33 +97,33 @@ const Contact = () => {
                   <h2 className="text-3xl font-bold font-sans tracking-tight">Reach Out <span className="text-gradient">Directly</span></h2>
                   
                   <div className="grid gap-6">
-                    <div className="glass neon-border rounded-2xl p-6 flex items-start gap-4 hover-lift transition-all group">
+                    <div className="glass neon-border rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 hover-lift transition-all group">
                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                           <Mail className="text-primary" size={20} />
                        </div>
                        <div>
-                          <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">General Inquiries</div>
-                          <div className="text-lg font-bold">info@sycobyte.com</div>
+                          <div className="text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">General Inquiries</div>
+                          <div className="text-base md:text-lg font-bold break-all sm:break-normal">sycobytestechnology@gmail.com</div>
                        </div>
                     </div>
                     
-                    <div className="glass neon-border rounded-2xl p-6 flex items-start gap-4 hover-lift transition-all group">
+                    <div className="glass neon-border rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 hover-lift transition-all group">
                        <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors">
                           <Phone className="text-emerald-500" size={20} />
                        </div>
                        <div>
-                          <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Customer Support</div>
-                          <div className="text-lg font-bold">+1 (555) 123-4567</div>
+                          <div className="text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Customer Support</div>
+                          <div className="text-base md:text-lg font-bold">+91 7837243545</div>
                        </div>
                     </div>
 
-                    <div className="glass neon-border rounded-2xl p-6 flex items-start gap-4 hover-lift transition-all group">
+                    <div className="glass neon-border rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 hover-lift transition-all group">
                        <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0 group-hover:bg-amber-500/20 transition-colors">
                           <Clock className="text-amber-500" size={20} />
                        </div>
                        <div>
-                          <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Response Time</div>
-                          <div className="text-lg font-bold">Within 4 Hours</div>
+                          <div className="text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Response Time</div>
+                          <div className="text-base md:text-lg font-bold">Within 4 Hours</div>
                        </div>
                     </div>
                   </div>
@@ -132,10 +142,10 @@ const Contact = () => {
                       <a 
                         key={social.label} 
                         href="#" 
-                        className={`w-14 h-14 glass rounded-2xl flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-110 hover:-rotate-6 hover:shadow-xl ${social.color}`}
+                        className={`w-12 h-12 sm:w-14 sm:h-14 glass rounded-2xl flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-110 hover:-rotate-6 hover:shadow-xl ${social.color}`}
                         aria-label={social.label}
                       >
-                        <social.icon size={24} />
+                        <social.icon size={20} className="sm:size-[24px]" />
                       </a>
                     ))}
                   </div>
@@ -146,7 +156,7 @@ const Contact = () => {
             {/* Contact Form (Right) */}
             <div className="lg:col-span-7">
               <ScrollReveal delay={2}>
-                <div className="glass-dark neon-border rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden group">
+                <div className="glass-dark neon-border rounded-[1.5rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 relative overflow-hidden group">
                   {/* Decorative background circle */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-700" />
                   
@@ -217,54 +227,11 @@ const Contact = () => {
       </section>
 
       {/* Office Locations */}
-      <section className="py-24 bg-muted/20 relative">
-        <div className="container mx-auto px-4 lg:px-8">
-          <SectionHeading 
-            badge="Locations" 
-            title="Our Global Presence" 
-            description="We're a global team with offices in major tech hubs around the world."
-          />
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-16">
-            {officeLocations.map((office, i) => (
-              <ScrollReveal key={office.city} delay={i + 1}>
-                <div className="glass neon-border rounded-[2.5rem] p-10 group hover-lift transition-all duration-300">
-                  <div className="flex items-center gap-4 mb-8">
-                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
-                        <office.icon size={32} />
-                     </div>
-                     <div>
-                       <h3 className="text-3xl font-bold">{office.city}</h3>
-                       <div className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-widest mt-1">
-                          <Globe2 size={12} className="text-primary" /> {office.timezone}
-                       </div>
-                     </div>
-                  </div>
-                  
-                  <div className="space-y-6 pt-4 border-t border-border/40">
-                    <div className="flex items-start gap-4">
-                       <MapPin className="text-primary mt-1 shrink-0" size={18} />
-                       <div className="font-medium text-muted-foreground leading-relaxed">{office.address}</div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                       <Phone className="text-primary shrink-0" size={18} />
-                       <div className="font-bold underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-all">{office.phone}</div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                       <Mail className="text-primary shrink-0" size={18} />
-                       <div className="font-bold">{office.email}</div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* FAQ Call-to-action */}
-      <section className="py-24">
-         <div className="container mx-auto px-4 lg:px-8 text-center">
+      <section className="py-16 md:py-24">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>
                <h3 className="text-3xl font-bold mb-6">Need Immediate Help?</h3>
                <p className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed font-medium">
@@ -287,3 +254,51 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
+  //  <section className="py-24 bg-muted/20 relative">
+  //       <div className="container mx-auto px-4 lg:px-8">
+  //         <SectionHeading 
+  //           badge="Locations" 
+  //           title="Our Global Presence" 
+  //           description="We're a global team with offices in major tech hubs around the world."
+  //         />
+          
+  //         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-16">
+  //           {officeLocations.map((office, i) => (
+  //             <ScrollReveal key={office.city} delay={i + 1}>
+  //               <div className="glass neon-border rounded-[2.5rem] p-10 group hover-lift transition-all duration-300">
+  //                 <div className="flex items-center gap-4 mb-8">
+  //                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+  //                       <office.icon size={32} />
+  //                    </div>
+  //                    <div>
+  //                      <h3 className="text-3xl font-bold">{office.city}</h3>
+  //                      <div className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-widest mt-1">
+  //                         <Globe2 size={12} className="text-primary" /> {office.timezone}
+  //                      </div>
+  //                    </div>
+  //                 </div>
+                  
+  //                 <div className="space-y-6 pt-4 border-t border-border/40">
+  //                   <div className="flex items-start gap-4">
+  //                      <MapPin className="text-primary mt-1 shrink-0" size={18} />
+  //                      <div className="font-medium text-muted-foreground leading-relaxed">{office.address}</div>
+  //                   </div>
+  //                   <div className="flex items-center gap-4">
+  //                      <Phone className="text-primary shrink-0" size={18} />
+  //                      <div className="font-bold underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-all">{office.phone}</div>
+  //                   </div>
+  //                   <div className="flex items-center gap-4">
+  //                      <Mail className="text-primary shrink-0" size={18} />
+  //                      <div className="font-bold">{office.email}</div>
+  //                   </div>
+  //                 </div>
+  //               </div>
+  //             </ScrollReveal>
+  //           ))}
+  //         </div>
+  //       </div>
+  //     </section>
