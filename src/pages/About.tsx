@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Layout } from "@/components/Layout";
+
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
@@ -123,7 +123,7 @@ const stats = [
 /* ── Page ──────────────────────────────────────────── */
 const About = () => {
   return (
-    <Layout>
+    <>
 
       {/* ── Hero ─────────────────────────────────── */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -394,7 +394,7 @@ const About = () => {
         </div>
       </section>
 
-    </Layout>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Layout } from "@/components/Layout";
+
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ArrowRight, ExternalLink, Code2, Sparkles, MonitorSmartphone, Building2 } from "lucide-react";
@@ -43,7 +43,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 hero-mesh pointer-events-none" />
@@ -135,7 +135,7 @@ const Projects = () => {
           </ScrollReveal>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

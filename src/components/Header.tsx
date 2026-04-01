@@ -42,11 +42,15 @@ export function Header() {
         <div className="flex items-center justify-between h-18 lg:h-22">
 
           <Link to="/" className="group flex items-center">
-            <div className="relative h-12 md:h-14 lg:h-16 transition-all duration-500 group-hover:scale-110 shrink-0 flex items-center">
+            <div className={`relative transition-all duration-500 mt-2 group-hover:scale-105 shrink-0 flex items-center ${
+              mounted && resolvedTheme === "dark" 
+                ? "h-12 md:h-14 lg:h-16" 
+                : "h-10 md:h-12 lg:h-14"
+            }`}>
               <img
                 src={mounted && resolvedTheme === "dark" ? "/darkLogo.png" : "/logo.png"}
                 alt="Sycobytes Technologies"
-                className="h-full w-auto object-contain select-none shadow-glow-sm"
+                className="h-full w-auto object-contain select-none shadow-glow-sm py-1"
               />
             </div>
           </Link>

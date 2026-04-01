@@ -9,7 +9,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Layout } from "@/components/Layout";
+
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -170,7 +170,7 @@ const Index = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
 
       {/* ── Hero ─────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -557,7 +557,7 @@ const Index = () => {
         </div>
       </section>
 
-    </Layout>
+    </>
   );
 };
 
