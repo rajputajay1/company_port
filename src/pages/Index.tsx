@@ -12,8 +12,10 @@ import { Button } from "@/components/ui/button";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 
 /* ─── Animated Counter ─────────────────────────── */
+
 function CounterNumber({ end, label, suffix = "+" }: { end: number; label: string; suffix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -171,6 +173,15 @@ const Index = () => {
 
   return (
     <>
+      <SEO 
+        title="Sycobytes – Web Development & IT Solutions Company"
+        description="Sycobytes provides professional web development, mobile apps, and custom IT solutions to grow your business online. Fast, secure, and scalable services."
+        keywords="web development company, website design, IT services, software development, app development, digital solutions, Sycobytes"
+        ogTitle="Sycobytes – Web Development & IT Solutions Company"
+        ogDescription="Grow your business with high-quality websites, apps, and IT solutions by Sycobytes."
+        twitterTitle="Sycobytes – Web Development Company"
+        twitterDescription="Professional websites, apps & IT solutions to grow your business."
+      />
 
       {/* ── Hero ─────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">

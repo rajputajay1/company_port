@@ -11,13 +11,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
+
 
 const officeLocations = [
   {
     city: "Chandigarh",
     address: "SCO 123, Sector 17, Chandigarh, India",
     icon: Building,
-    phone: "+91 7837243545",
+    phone: "+91 6280386102",
     email: "sycobytestechnology@gmail.com",
     timezone: "IST (UTC+5:30)"
   }
@@ -62,6 +64,11 @@ const Contact = () => {
 
   return (
     <>
+      <SEO 
+        title="Contact Sycobytes – Get Your Project Started"
+        description="Contact Sycobytes for web development, app development, and IT services. Let's build your next digital project."
+        keywords="contact Sycobytes, web development contact, hire developers"
+      />
       {/* Hero Section */}
       <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 hero-mesh pointer-events-none" />
@@ -113,7 +120,7 @@ const Contact = () => {
                        </div>
                        <div>
                           <div className="text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Customer Support</div>
-                          <div className="text-base md:text-lg font-bold">+91 7837243545</div>
+                          <div className="text-base md:text-lg font-bold">+91 6280386102</div>
                        </div>
                     </div>
 

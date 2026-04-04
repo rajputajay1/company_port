@@ -9,8 +9,10 @@ import {
   Rocket, Star, TrendingUp, Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 /* ── Team Data ───────────────────────────────────── */
+
 const team = [
   {
     name: "Alex Johnson",
@@ -124,6 +126,11 @@ const stats = [
 const About = () => {
   return (
     <>
+      <SEO 
+        title="About Sycobytes – Web Development Experts"
+        description="Learn about Sycobytes, a trusted web development and IT solutions company delivering innovative and scalable digital products."
+        keywords="about Sycobytes, web development company, IT experts, software company India"
+      />
 
       {/* ── Hero ─────────────────────────────────── */}
       <section className="relative pt-32 pb-24 overflow-hidden">

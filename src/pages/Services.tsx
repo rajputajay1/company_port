@@ -9,6 +9,8 @@ import {
   Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
+
 
 
 const services = [
@@ -96,6 +98,11 @@ const processSteps = [
 const Services = () => {
   return (
     <>
+      <SEO 
+        title="Our Services – Web, App & Software Development | Sycobytes"
+        description="Explore Sycobytes services including website development, mobile apps, custom software, and digital solutions for businesses."
+        keywords="web development services, app development, custom software, IT solutions, Sycobytes services"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 hero-mesh pointer-events-none" />

@@ -27,19 +27,23 @@ export function Footer() {
   }, []);
   return (
     <footer className="bg-secondary border-t border-border">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="container mx-auto px-4 lg:px-8 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="group flex items-center mb-6">
-              <div className="relative h-16 md:h-20 lg:h-25 transition-all duration-500 group-hover:scale-110 shrink-0 flex items-center">
-                <img
-                  src={mounted && resolvedTheme === "dark" ? "/darkLogo.png" : "/logo.png"}
-                  alt="Sycobytes Technologies"
-                  className="h-full w-auto object-contain select-none shadow-glow-md"
-                />
-              </div>
-            </Link>
+             <Link to="/" className="group flex items-center">
+            <div className={`relative transition-all duration-500 mt-2 group-hover:scale-105 shrink-0 flex items-center ${
+              mounted && resolvedTheme === "dark" 
+                ? "h-12 md:h-14 lg:h-16" 
+                : "h-10 md:h-12 lg:h-14"
+            }`}>
+              <img
+                src={mounted && resolvedTheme === "dark" ? "/darkLogo.png" : "/logo.png"}
+                alt="Sycobytes Technologies"
+                className="h-full w-auto object-contain select-none shadow-glow-sm py-1"
+              />
+            </div>
+          </Link>
             <p className="text-muted-foreground leading-relaxed max-w-md mb-6">
               Empowering businesses with cutting-edge technology solutions. We transform ideas into powerful digital experiences that drive growth and innovation.
             </p>
@@ -80,7 +84,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>Chandigarh, India</li>
               <li>sycobytestechnology@gmail.com</li>
-              <li>+91 7837243545</li>
+              <li>+91 6280386102</li>
             </ul>
           </div>
         </div>
