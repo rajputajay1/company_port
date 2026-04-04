@@ -70,7 +70,7 @@ const Contact = () => {
         keywords="contact Sycobytes, web development contact, hire developers"
       />
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 hero-mesh pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

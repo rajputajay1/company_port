@@ -184,7 +184,7 @@ const Index = () => {
       />
 
       {/* ── Hero ─────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center overflow-hidden sm:pt-20 pt-10">
 
         {/* Mesh gradient background */}
         <div className="absolute inset-0 hero-mesh pointer-events-none" />
