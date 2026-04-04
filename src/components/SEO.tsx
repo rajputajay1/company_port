@@ -26,7 +26,7 @@ const SEO = ({
   ogDescription,
   ogType = "website",
   ogUrl = "https://sycobytes.com/",
-  ogImage = "https://sycobytes.com/assets/preview.jpg",
+  ogImage = "/icon.png",
   twitterCard = "summary_large_image",
   twitterTitle,
   twitterDescription,
